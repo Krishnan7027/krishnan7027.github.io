@@ -1,0 +1,9 @@
+# Netlify redirects for SPA routing and CMS
+/admin              /admin/index.html   200
+/admin/*            /admin/index.html   200
+
+# Content files should be served as-is
+/content/*          /content/:splat     200
+
+# Fallback for everything else
+/*                  /index.html         200
