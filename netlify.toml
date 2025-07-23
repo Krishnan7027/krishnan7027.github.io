@@ -1,0 +1,15 @@
+[build]
+  # No build command needed for static site
+  publish = "."
+  
+# Redirect rules for CMS functionality
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# Headers for CMS to work properly
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
