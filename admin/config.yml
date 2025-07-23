@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (main or master)
+
+media_folder: "assets/images" # Media files will be stored in the assets/images directory
+public_folder: "/assets/images" # The src attribute for uploaded media will begin with /assets/images
+
+collections:
+  - name: "portfolio" # Used in routes, e.g., /admin/collections/portfolio
+    label: "Portfolio Content" # Used in the UI
+    files:
+      - label: "About Me"
+        name: "about"
+        file: "content/about.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Profile Image", name: "image", widget: "image"}
+          - {label: "Description Paragraph 1", name: "description1", widget: "text"}
+          - {label: "Description Paragraph 2", name: "description2", widget: "text"}
+          - {label: "Resume File", name: "resume", widget: "file"}
+          
+      - label: "Hero Section"
+        name: "hero"
+        file: "content/hero.md"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Job Title", name: "title", widget: "string"}
+          - {label: "Background Image", name: "background", widget: "image", required: false}
+          
+      - label: "Contact Information"
+        name: "contact"
+        file: "content/contact.md"
+        fields:
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "GitHub URL", name: "github", widget: "string"}
+          - {label: "LinkedIn URL", name: "linkedin", widget: "string"}
+          - {label: "Contact Title", name: "title", widget: "string"}
+          - {label: "Contact Description", name: "description", widget: "text"}
+          
+  - name: "skills" # Skills collection
+    label: "Skills"
+    folder: "content/skills"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Skill Name", name: "title", widget: "string"}
+      - {label: "Icon Class", name: "icon", widget: "string", hint: "Font Awesome icon class (e.g., fab fa-html5)"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Order", name: "order", widget: "number", default: 1}
+      
+  - name: "projects" # Projects collection
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Project Name", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Icon Class", name: "icon", widget: "string", hint: "Font Awesome icon class (e.g., fas fa-shopping-cart)"}
+      - {label: "Technologies", name: "technologies", widget: "list", allow_add: true}
+      - {label: "Live URL", name: "live_url", widget: "string", required: false}
+      - {label: "GitHub URL", name: "github_url", widget: "string", required: false}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      - {label: "Order", name: "order", widget: "number", default: 1}
