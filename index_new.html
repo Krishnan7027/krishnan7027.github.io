@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishnanunni S | Portfolio - Magento Developer & Full Stack Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="logo">KS</div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <ul class="nav-links mobile-menu" id="mobileMenu">
+                <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+                <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+                <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Krishnanunni S</h1>
+            <p class="hero-subtitle">Magento Developer & Full Stack Engineer</p>
+            <a href="#contact" class="cta-button">
+                <i class="fas fa-envelope"></i> Get In Touch
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="photo_new.png" alt="Krishnanunni S - Profile Photo" />
+                </div>
+                <div class="about-text">
+                    <p>Welcome to my portfolio! I'm a proficient Software Developer with 2 years of experience in backend and frontend development, specializing in Magento and Laravel. I have demonstrated success in PHP-based web application development, API integration, and UI design using Vue.js.</p>
+                    <br>
+                    <p>I have a proven track record in delivering tailored solutions, including a custom hospital management system for Alphonsa Hospital. I'm adept at optimizing performance and resolving complex challenges, with a strong commitment to quality and continuous improvement. Currently working at Webandcrafts Pvt. Ltd as a Magento Developer.</p>
+                    <br>
+                    <div class="resume-section">
+                        <a href="./Krishnanunni_S_Resume.pdf" download class="resume-btn">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="skill-title">Frontend Development</h3>
+                    <p class="skill-description">HTML, CSS, Bootstrap, Tailwind CSS, JavaScript, Vue.js, and React Native for creating modern, responsive web applications.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h3 class="skill-title">Backend Development</h3>
+                    <p class="skill-description">PHP, Laravel, MySQL, GraphQL, and REST API development for robust and scalable backend systems.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-magento"></i>
+                    </div>
+                    <h3 class="skill-title">Magento Development</h3>
+                    <p class="skill-description">Magento 2 customization, extension development, and e-commerce solutions with GraphQL API integration.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="skill-title">Full Stack Solutions</h3>
+                    <p class="skill-description">End-to-end application development with API integration, performance optimization, and live project management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">A comprehensive e-commerce website built with Magento 2, featuring custom extensions, performance optimization, and GraphQL API integration for enhanced user experience.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Magento 2</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary-link">View Details</a>
+                            <a href="https://github.com/krishnan7027" class="project-link secondary-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Hospital Management System</h3>
+                        <p class="project-description">Custom hospital management system for Alphonsa Hospital with token management, appointment booking, and real-time updates for seamless patient care.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary-link">View Details</a>
+                            <a href="https://github.com/krishnan7027" class="project-link secondary-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Laravel Web Application</h3>
+                        <p class="project-description">Modern web application built with Laravel backend, Vue.js frontend, Tailwind CSS styling, and REST API integration with real-time features.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Tailwind</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary-link">View Details</a>
+                            <a href="https://github.com/krishnan7027" class="project-link secondary-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title" style="color: white;">Let's Work Together</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 3rem;">Have a project in mind or want to collaborate? I'd love to hear from you!</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <a href="mailto:krishnanunni.s.1996@gmail.com?subject=Hello Krishnanunni - Let's Connect!&body=Hi Krishnanunni,%0D%0A%0D%0AI came across your portfolio and would like to discuss..." style="color: white; text-decoration: none;">krishnanunni.s.1996@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-text">
+                            <a href="https://github.com/krishnan7027" style="color: white; text-decoration: none;">github.com/krishnan7027</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-text">
+                            <a href="https://linkedin.com/in/krishnanunni96" style="color: white; text-decoration: none;">linkedin.com/in/krishnanunni96</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Krishnanunni S. All rights reserved. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
